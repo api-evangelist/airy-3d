@@ -5,19 +5,39 @@ description: 'Airy:3D is a company surfaced via the API Evangelist harvest backl
 url: https://raw.githubusercontent.com/api-evangelist/airy-3d/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-21 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-09-21'
 modified: '2026-09-21'
 tags:
 - Company
-apis: []
+apis:
+- name: Airy:3D API
+  description: "Airy:3D provides 3D depth sensing solutions via its platform."
+  humanURL: https://airy3d.com
+  baseURL: null
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: LLMsTxt
+  url: llms/airy-3d-llms.txt
 - type: Website
   url: https://www.nasdaqprivatemarket.com/
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The provider's website renders a JavaScript shell and no machine‑readable API spec was found.
+  evidence:
+    - url: https://airy3d.com
+      status: 202
+  checked: 2026-09-21
+x-enrichment:
+  date: '2026-09-21'
+  status: enriched
+  artifacts_added: 3
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
